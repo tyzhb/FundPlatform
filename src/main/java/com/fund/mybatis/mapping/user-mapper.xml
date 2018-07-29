@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fund.dao.UserDao">
+
+    <sql id="table_name">user</sql>
+
+    <select id="getuserlist" resultType="com.fund.entity.User">
+        SELECT * FROM
+        <include refid="table_name" />
+        where 1=#{id}
+
+    </select>
+
+</mapper>
